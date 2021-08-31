@@ -1,0 +1,3 @@
+a : sed -i '/\bcode\b/d' /home/BSD.txt > /home/BSD_DELETE.txt
+
+b : sed -i 's/\bthe\b/them/g' /home/BSD.txt > /home/BSD_REPLACE.txt
