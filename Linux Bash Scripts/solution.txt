@@ -1,0 +1,12 @@
+
+### news_backup.sh :
+
+#!/bin/bash
+zip -r /backup/xfusioncorp_news.zip /var/www/html/news
+scp /backup/xfusioncorp_news.zip clint@172.16.238.16:/backup/xfusioncorp_news.zip
+
+### configuring passwordless autentication :
+
+1. From app-server run `ssh-keygen` to generate a key.
+2. Copy the key to the remote server i.e backup server with command : `ssh-copy-id clint@172.16.238.16`
+3. run the script, scp should work without asking for password.
